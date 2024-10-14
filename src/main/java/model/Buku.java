@@ -9,36 +9,39 @@ package model;
  * @author Lenovo GK
  */
 public class Buku {
-    // Properties
-    private String judul;
-    private String penulis;
-    private String penerbit;
+    private final String judul; // Menggunakan final agar judul tidak bisa diubah setelah dibuat
+    private String pengarang;
+    private int tahunTerbit;
 
     // Constructor
-    public Buku(String judul, String penulis, String penerbit) {
+    public Buku(String judul, String pengarang, int tahunTerbit) {
         this.judul = judul;
-        this.penulis = penulis;
-        this.penerbit = penerbit;
+        this.pengarang = pengarang;
+        this.tahunTerbit = tahunTerbit;
     }
 
-    // Getter methods
+    // Getter untuk judul
     public String getJudul() {
         return judul;
     }
 
-    public String getPenulis() {
-        return penulis;
+    // Getter untuk pengarang
+    public String getPengarang() {
+        return pengarang;
     }
 
-    public String getPenerbit() {
-        return penerbit;
+    // Setter untuk pengarang
+    public void setPengarang(String pengarang) {
+        this.pengarang = pengarang;
     }
 
-    // Method to display book information
-    public void tampilkanInformasi() {
-        System.out.println("Judul Buku   : " + judul);
-        System.out.println("Penulis      : " + penulis);
-        System.out.println("Penerbit     : " + penerbit);
-        System.out.println("-------------------------");
+    // Getter untuk tahun terbit
+    public int getTahunTerbit() {
+        return tahunTerbit;
+    }
+
+    // Setter untuk tahun terbit
+    public void setTahunTerbit(int tahunTerbit) {
+        this.tahunTerbit = tahunTerbit;
     }
 }
